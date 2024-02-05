@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image";
 import SignIn from "./sign-in";
 import Link from "next/link";
 
@@ -27,9 +27,8 @@ function NavBar() {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <span className={styles.logoContainer}>
-          <img className={styles.logo} src="/youtube-logo.svg" alt="YouTube Logo" />
-        </span>
+        <Image width={100} height={30}
+          src="/youtube-logo.svg" alt="YouTube Logo"/>
       </Link>
       { 
         user && <Upload />
